@@ -3,7 +3,17 @@ p, ul, li, form { margin:0; padding:0;}
 
 textarea, input, select,
 body { font:14px helvetica,sans-serif; }
-
+a { color:blue; text-transform:none; }
+a:hover { text-transform:underline; }
 #page { width:960px; margin:0 auto; }
-.tweet { border-top:1px solid #ccc; margin:5px;}
+.tweet { border-top:1px solid #ccc; margin:5px; min-height:20px; }
+
+.tweet {
+	-webkit-animation:fade-in 2s 1;
+}
+
+@-webkit-keyframes fade-in {
+	0% { background-color:#ffffcc; }
+	100% {  }
+}
 

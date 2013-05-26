@@ -3,52 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Twittler | Hack Reactor</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div id="page">
       <h1>Twittler</h1>
-      <div class="tweet">
-        <h2><a href="#!">@name</a></h2>
-        <p>message</p>
-        <div>created</div>
+      <div>
+        <button id="update">Update</button>
+        <span id="count"></span>
       </div>
       <div id="tweets"></div>
+      <div id="footer"></div>
     </div>
-    <script src="jquery.js"></script>
-    <script src="data_generator.js"></script>
-    <script>
-
-      $(document).ready(function(){
-        var $tweets = $('#tweets');
-        //$page.html('');
-
-        var init = function() {
-          getTweets();
-          getTweets();
-        };
-
-        var getTweets = function() {
-          var index = streams.home.length - 1;
-          while(index >= 0){
-            var tweet = streams.home[index],
-                $tweet = $('<div class="tweet"></div>'),
-                user = tweet.user,
-                message = tweet.message,
-                created = tweet.created_at;
-
-
-
-            $tweet.text('@' + user + ': ' + message + ' -- ' + created);
-            $tweet.appendTo($tweets);
-            index -= 1;
-          }
-        }
-
-        init(); // onload
-
-      });
-
-    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/data_generator.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
