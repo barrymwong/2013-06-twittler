@@ -1,0 +1,9 @@
+html, body, h1, h2, h3, h4, h5, h6, 
+p, ul, li, form { margin:0; padding:0;}
+
+textarea, input, select,
+body { font:14px helvetica,sans-serif; }
+
+#page { width:960px; margin:0 auto; }
+.tweet { border-top:1px solid #ccc; margin:5px;}
+
