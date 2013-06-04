@@ -9,29 +9,35 @@
   <body>
     <div id="page">
       <div class="header">
-        <header>
-          <div class="content">
-            <h1>Twittler</h1>
-          </div>
-        </header>
-      </div>
-      <div class="content">
-        <div>
-          <a id="count-button" class="button" href="#"><span id="count"></span></a>
+        <div class="page">
+          <header>
+            <div class="content">
+              <a id="back" href="#" class="fl">&laquo;</a>
+              <h1 id="title">Twittler</h1>
+              <div class="clear"></div>
+            </div>
+          </header>
         </div>
-        <div id="load-count"></div>
-        <div id="tweets"></div>
       </div>
-      <div id="footer">
-        <footer>
-          <div class="content">
-            <a class="top fr" href="#">Top</a>
-            <span class="fl">&copy; Twittler, 2013.</span>
-            <div class="cb"></div>
+      <div class="page">
+        <div class="content">
+          <div>
+            <a id="count-button" class="button" href="#"><span id="count"></span></a>
           </div>
-        </footer>
+          <div id="load-count"></div>
+          <div id="tweets"></div>
+        </div>
+        <div id="footer">
+          <footer>
+            <div class="content">
+              <a class="top fr" href="#">Top</a>
+              <span class="fl">&copy; Twittler, 2013.</span>
+              <div class="cb"></div>
+            </div>
+          </footer>
+        </div>
       </div>
-    </div>
+    </div><!-- #page -->
     <script src="js/jquery.js"></script>
     <script src="js/data_generator.js"></script>
     <script src="js/script.js"></script>

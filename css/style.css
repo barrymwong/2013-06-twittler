@@ -5,12 +5,15 @@ textarea, input, select,
 body { font:16px Monda,helvetica,sans-serif; background-color:#3366cc; color:#fff; }
 a { color:#fff; text-decoration:none; }
 a:hover { text-decoration:underline; }
+#page { margin-bottom:50px; }
 .fl {float:left;}
 .fr {float:right;}
 .cb {clear:both;}
-#page { margin-bottom:50px; }
 .header { background-color:#fff; padding:10px 0;}
+.header a,
 .header h1 { color:#3366cc; text-align:center; font-size:42px; }
+#back { color:#f26522; }
+.slide-left #back { display:none; }
 .content { width:768px; margin:0 auto; }
 #count-button { display:block; text-align:center; padding:5px; margin:10px 0; }
 #count-button:hover { background-color:#ff6633; }
@@ -22,14 +25,37 @@ a:hover { text-decoration:underline; }
 .tweet > .img { position:absolute; top:10px; left:10px; border:1px solid #3366cc; width:50px; height:50px; }
 .tweet .img img { width:50px; }
 .tweet .created { position:absolute; top:10px; right:10px; color:#666; font-size:12px;}
+.user { color:#666; }
 .button { positiion:relative; text-decoration:none; font-size:20px; color:#fff; border-radius:5px; background-color:#f26522; box-shadow:0px 0px 5px #000; }
 #footer { text-align:right; }
 
+.slide-right {
+	-webkit-animation:slide-right 0.4s 1 ease-out;
+}
+
+.slide-left {
+	-webkit-animation:slide-left 0.4s 1 ease-out;
+}
+
 .tweet {
 	-webkit-animation:slide-down 1s 1 ease-out;
+	-moz-animation:slide-down 1s 1 ease-out;
+	animation:slide-down 1s 1 ease-out;
 }
 #count {
 	-webkit-animation:fade-in 1s 1 ease-out;
+	-moz-animation:fade-in 1s 1 ease-out;
+	animation:fade-in 1s 1 ease-out;
+}
+
+@-webkit-keyframes slide-right {
+	0% { -webkit-transform: translate(-100%, 0px ); }
+	100% { -webkit-transform: translate(0%, 0px ); }
+}
+
+@-webkit-keyframes slide-left {
+	0% { -webkit-transform: translate(100%, 0px ); }
+	100% { -webkit-transform: translate(0%, 0px ); }
 }
 
 @-webkit-keyframes slide-down {
@@ -37,8 +63,28 @@ a:hover { text-decoration:underline; }
 	2% { opacity:.5; }
 	100% { }
 }
+@-moz-keyframes slide-down {
+	0% { opacity:.5; }
+	2% { opacity:.5; }
+	100% { }
+}
+@keyframes slide-down {
+	0% { opacity:.5; }
+	2% { opacity:.5; }
+	100% { }
+}
 
 @-webkit-keyframes fade-in {
+	0% { background-color:#ffffcc; top:-50px; opacity:0; }
+	50% { top:0;  }
+	100% { }
+}
+@-moz-keyframes fade-in {
+	0% { background-color:#ffffcc; top:-50px; opacity:0; }
+	50% { top:0;  }
+	100% { }
+}
+@keyframes fade-in {
 	0% { background-color:#ffffcc; top:-50px; opacity:0; }
 	50% { top:0;  }
 	100% { }
